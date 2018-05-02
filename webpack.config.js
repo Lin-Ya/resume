@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // 拆分css样式的插件
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const Webpack = require('webpack')
+
 
 module.exports = {
     entry: './src/js/index.js',    // 入口文件
@@ -56,7 +58,11 @@ module.exports = {
                 use: 'babel-loader',
                 include: /src/,          // 只转化src目录下的js
                 exclude: /node_modules/  // 排除掉node_modules，优化打包速度
-            }
+            },
+            {
+                test: require.resolve('jquery'),  // 此loader配置项的目标是NPM中的jquery
+                loader: 'expose-loader?$!expose-loader?jQuery', // 先把jQuery对象声明成为全局变量`jQuery`，再通过管道进一步又声明成为全局变量`$`
+            },
         ]
     },
     plugins: [
@@ -70,7 +76,13 @@ module.exports = {
         // 拆分后会把css文件放到dist目录下的css/style.css
         new ExtractTextWebpackPlugin('css/style.css'),
         // 打包前先清空
-        new CleanWebpackPlugin('dist')  
+        new CleanWebpackPlugin('dist'),
+        new Webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            'window.$': 'jquery',
+        })
     ],
     devServer: {
         contentBase: './dist',
@@ -81,9 +93,9 @@ module.exports = {
     },
     resolve: {
         // 别名
-        alias: {
-            $: './src/lib/jquery.js'
-        },
+        // alias: {
+        //     jquery: path.join(__dirname, "/src/lib/jquery.js")
+        // },
         // 省略后缀
         extensions: ['.js', '.json', '.css']
     }, 
