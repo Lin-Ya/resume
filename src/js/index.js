@@ -1,5 +1,6 @@
-// import '../less/index.less';
-let a = '你好'
+import '../less/index.less';
+import '../css/index.css';
+let a = '我好'
 let sayhello = (e)=>{
     alert(e)
 }

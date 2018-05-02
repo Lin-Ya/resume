@@ -1,3 +1,9 @@
 .hello {
     color: red;
+    width: 100px;
+    height: 100px;
+    background: url('../img/1.jpg') no-repeat content-box;
+}
+body {
+    /* display: flex; */
 }
