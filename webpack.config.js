@@ -50,8 +50,8 @@ module.exports = {
             },
             {
                 //处理字体文件
-                test: /\.(eot|ttf|woff|svg)$/,
-                use: 'file-loader'
+                test: /\.(woff|svg|eot|ttf|otf)(\??.*)?/,
+                use: ['url-loader?name=fonts/[name].[md5:hash:hex:7].[ext]']
             },
             {   
                 test: /\.js$/,
