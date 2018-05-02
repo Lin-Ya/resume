@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "简历主页",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lin-Ya/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lin-Ya/resume/issues"
+  },
+  "homepage": "https://github.com/Lin-Ya/resume#readme",
+  "dependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2"
+  }
+}
