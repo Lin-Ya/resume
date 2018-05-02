@@ -10,6 +10,7 @@ module.exports = {
     output: {
         filename: 'bundle.[hash:4].js',      // 打包后的文件名称
         path: path.resolve('dist')  // 打包后的目录，必须是绝对路径
+        
     },
     module: {
         rules: [
@@ -18,7 +19,7 @@ module.exports = {
                 use: ExtractTextWebpackPlugin.extract({
                     // 将css用link的方式引入就不再需要style-loader了
                     use: ['css-loader','postcss-loader'],
-                    publicPath: '../'
+                    publicPath: '../'   //公共路径，为了处理在css中引用其他文件如引用img/01.jpg，就要查找上一级目录下的img
                 })
             },
             {
@@ -35,7 +36,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,    // 小于8k的图片自动转成base64格式，并且不会存在实体图片
-                            outputPath: 'images/'   // 图片打包后存放的目录。
+                            outputPath: 'images/'   // 图片打包后存放的目录。位于输出目录下
                         }
                     }
                 ]
@@ -78,5 +79,14 @@ module.exports = {
         open: true,             // 自动打开浏览器
         hot: true               // 开启热更新
     },
-    mode: 'development'      // 模式配置
+    resolve: {
+        // 别名
+        alias: {
+            $: './src/lib/jquery.js'
+        },
+        // 省略后缀
+        extensions: ['.js', '.json', '.css']
+    }, 
+    devtool: 'source-map',
+    // mode: 'development'      // 模式配置
 }
