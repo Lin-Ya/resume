@@ -5,20 +5,47 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nice to meet you</title>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+    <script src="//at.alicdn.com/t/font_651573_qy6kx9t12fls1yvi.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- <section class="bt-welcome"></section>
+        <section class="bt-welcome" id="welcome">
+            <div id="owl-welcome" class="owl-carousel">
+                <a class="item"><img src="./img/01.jpg"></a>
+                <a class="item">
+                    <img src="./img/02.jpg">
+                </a>
+                <a class="item">
+                    <img src="./img/03.jpg">
+                </a>
+
+            </div>
+            <div class="welcome-message">
+                <div class="heading">
+                    <h1>HI,我是冯晓泳</h1>
+                    <p>前端开发工程师</p>
+                </div>
+                <a href="#aboutme">关于我</a>
+                <a href="#">下载简历</a>
+            </div>
+        </section>
         <main>
-            <nav class="topbar"></nav>
+            <nav class="bt-navbar"></nav>
             <section class="bt-hero"></section>
-            <section class="bt-aboutme"></section>
+            <section class="bt-aboutme" id="aboutme"></section>
             <section class="bt-skills"></section>
             <section class="bt-project"></section>
             <section class="bt-experience"></section>
             <section class="bt-contact"></section>
         </main>
-        <footer class="bt-footer"></footer> -->
-    </div>
+        <footer class="bt-footer"></footer>
 </body>
 </html>

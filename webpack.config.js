@@ -28,7 +28,9 @@ module.exports = {
                 test: /\.less$/,     // 解析css
                 use: ExtractTextWebpackPlugin.extract({
                     // 将css用link的方式引入就不再需要style-loader了
-                    use: ['css-loader', 'postcss-loader', 'less-loader']
+                    use: ['css-loader', 'postcss-loader', 'less-loader'],
+                    publicPath: '../'   //公共路径，为了处理在css中引用其他文件如引用img/01.jpg，就要查找上一级目录下的img
+                    
                 })
             },
             {
@@ -89,7 +91,7 @@ module.exports = {
         host: 'localhost',      // 默认是localhost
         port: 3000,             // 端口
         open: true,             // 自动打开浏览器
-        hot: true               // 开启热更新
+        hot: false               // 开启热更新
     },
     resolve: {
         // 别名
@@ -100,5 +102,5 @@ module.exports = {
         extensions: ['.js', '.json', '.css']
     }, 
     devtool: 'source-map',
-    // mode: 'development'      // 模式配置
+    mode: 'development'      // 模式配置
 }
