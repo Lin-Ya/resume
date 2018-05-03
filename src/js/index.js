@@ -1,3 +1,4 @@
+import 'reset-css'
 import '../css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
@@ -12,7 +13,7 @@ $(function () {
         autoplay: 3800,
         autoplaySpeed: 2000,
         loop: true,
-        animateOut: 'fadeOut'
-        // nav: true
+        animateOut: 'fadeOut',
+        dots : false
     });
 });

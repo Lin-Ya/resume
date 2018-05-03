@@ -33,6 +33,7 @@
     "less-loader": "^4.1.0",
     "onchange": "^3.3.0",
     "postcss-loader": "^2.1.4",
+    "reset-css": "^3.0.0",
     "resolve-url-loader": "^2.3.0",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",

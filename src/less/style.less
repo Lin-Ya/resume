@@ -26,6 +26,12 @@
                 color: #fff;
                 border: 1px solid @gry;
                 border-radius: 50%;
+                &:hover {
+                    background-color: #fff;
+                    span {
+                        color: @main-blue;
+                    }
+                }
                 span {
                     padding: 10px 0;
                     line-height: 30px;
@@ -49,31 +55,62 @@
             h1 {
                 font-size: 70px;
                 text-shadow: @gry 3px 3px 2px;
-                &::selection {
-                    background: red;
-                }
             }
             p {
-                font-size: 25px;
+                font-size: 30px;
                 font-weight: bold;
-                margin: 20px;
+                margin-top: 30px;
             }
         }
         a {
-            font-size: 20px;
-            line-height: 20px;
-            padding: 10px;
-            border: 1px solid #fff;
-            width: 130px;
-            display: inline-block;
-            border-radius: 5px;
-            margin: 0 10px;
-            color: #fff;
-            &:hover {
-                color: @main-blue;
-                background-color: #fff;
-                border: none;
+            .click-btn;
+        }
+    }
+}
+
+nav.bt-navbar {
+    .nav {
+        width: 100%;
+        background-color: @main-blue;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        li {
+            a {
+                color: #fff;
+                &:hover {
+                    background-color: darken(@main-blue, 10%);
+                }
             }
+        }
+    }
+}
+
+.bt-hero {
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img {
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 10px 0;
+        }
+        a {
+            .click-btn;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 70px;
+        }
+        h3 {
+            font-size: 25px;
+            text-align: center;
         }
     }
 }

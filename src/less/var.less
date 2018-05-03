@@ -1,2 +1,26 @@
 @gry : #8f8f8f;
 @main-blue : #2a74e2;
+.click-btn {
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 10px;
+    border: 1px solid #fff;
+    width: 180px;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    &:hover {
+        color: @main-blue;
+        background-color: #fff;
+    }
+}
+
+* {
+    &::selection {
+        background: fadein(@main-blue, 40%);
+        color: #fff;
+    }
+}
