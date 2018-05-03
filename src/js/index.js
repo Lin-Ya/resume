@@ -9,8 +9,10 @@ import '../less/index.less'
 $(function () {
     $('#owl-welcome').owlCarousel({
         items: 1,
-        autoPlay: true,
+        autoplay: 3800,
+        autoplaySpeed: 2000,
         loop: true,
-        nav: true
+        animateOut: 'fadeOut'
+        // nav: true
     });
 });
