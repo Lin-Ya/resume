@@ -22,12 +22,22 @@ ol {
 }
 
 // index style
-main {
-    background-color: @main-blue;
-}
 
 section {
     padding: 20px 0; // overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    &:nth-child(2n){
+        background-color: @main-blue;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 200px;
+        border-bottom: 1px solid @main-blue;
+        top: 20px;
+        margin: 0 auto;
+    }
 }
 
 @import 'var.less';
