@@ -117,23 +117,22 @@ nav.bt-navbar {
 }
 
 .bt-aboutme {
+    text-align: center;
     .aboutme-content {
         font-size: 17px;
         line-height: 25px;
+        text-align: center;
     }
     .aboutme-service {
-        margin: 20px 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        margin: 20px auto;
+        max-width: 1400px;
+        text-align: center;        
         .service {
+            margin: 10px auto;
             cursor: pointer;
-            border-style: solid none solid solid;
+            border-style: solid solid solid solid;
             border-color: #ddd;
             border-width: 1px;
-            flex: 1;
             height: 150px;
             display: flex;
             flex-direction: column;
@@ -213,5 +212,17 @@ nav.bt-navbar {
                 }
             }
         }
+    }
+}
+
+.bt-project {
+    #project-nav {
+        max-width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        font-size: 20px;
     }
 }

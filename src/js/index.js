@@ -36,19 +36,23 @@ $(function () {
                 dotsEach: 1,
                 items: 1
             },
-            480: {
-                items: 2,
-                dotsEach: 3                
-            },
             768: {
-                items: 3,
+                items: 2,
                 dotsEach: 2
+            },
+            992: {
+                items: 3,
+                dotsEach: 3
             },
             1200: {
                 items: 4,
-                dotsEach: 1
+                dotsEach: 4
             }
         }
     });
     $('.circlechart').circlechart();
+    $('#project-nav a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show');
+    })
 });

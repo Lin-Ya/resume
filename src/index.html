@@ -39,17 +39,17 @@
             <a href="#aboutme">关于我</a>
         </div>
     </header>
-    <main>
+    <main class="container-fluid">
         <nav class="bt-navbar navbar-flat navbar navbar-fixed-top">
             <ul class="nav navbar-collapse scrollmenu">
                 <li role="presentation" class="active">
                     <a href="#aboutme">关于我</a>
                 </li>
                 <li role="presentation">
-                    <a href="#">作品</a>
+                    <a href="#">技术</a>
                 </li>
                 <li role="presentation">
-                    <a href="#">技术</a>
+                        <a href="#">作品</a>
                 </li>
                 <li role="presentation">
                     <a href="#">履历</a>
@@ -68,39 +68,39 @@
             </div>
         </section>
         <section class="bt-aboutme" id="aboutme">
-            <div class="content container">
-                <div class="section-title">
+            <div class="content">
+                <div class="section-title row">
                     <h1>关于我</h1>
                     <p>立志成为一名优秀的全栈工程师</p>
                 </div>
-                <div class="aboutme-content">
-                    <ul>
+                <div class="aboutme-content row">
+                    <ul class="col-md-10 col-md-offset-1">
                         <li>关注前端前沿技术，熟练应用常见前端框架，对代码有洁癖，追求高质量的代码，有组件化的思想，担当且创新</li>
                         <li>良好的团队沟通协作力和服务意识，较强的工作执 行力，和抗压能力，愿与公司同进退</li>
                         <li>较强的学习能力和 适应能力，良好的独立分析解决问题能力和逻辑分析思维</li>
                         <li>具有较强的审美能力</li>
-                    </ul>
+                    </ul>                 
                 </div>
                 <div class="aboutme-service">
-                    <div class="service">
+                    <div class="service col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-code"></use>
                         </svg>
                         <p>编程</p>
                     </div>
-                    <div class="service">
+                    <div class="service col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-design"></use>
                         </svg>
                         <p>创作</p>
                     </div>
-                    <div class="service">
+                    <div class="service col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-sport"></use>
                         </svg>
                         <p>运动</p>
                     </div>
-                    <div class="service">
+                    <div class="service col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <svg class="icon" aria-hidden="true">
                             <use xlink:href="#icon-music"></use>
                         </svg>
@@ -110,19 +110,19 @@
             </div>
         </section>
         <section class="bt-skills">
-<div class="content container">
+            <div class="content container">
                 <div class="section-title">
                     <h1>技术</h1>
                 </div>
                 <div class="skills-content">
-                    <div id="owl-skills" class="owl-carousel">
+                    <div id="owl-skills" class="owl-carousel col-md-6">
                         <div class="item">
                             <div class="circlechart" data-percentage="75">
                             </div>
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-jquery"></use>
                             </svg>
-                            <p>jQuery</p>
+                            <p>jQuery1</p>
                         </div>
                         <div class="item">
                             <div class="circlechart" data-percentage="75">
@@ -130,7 +130,7 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-jquery"></use>
                             </svg>
-                            <p>jQuery</p>
+                            <p>jQuery2</p>
                         </div>
                         <div class="item">
                             <div class="circlechart" data-percentage="75">
@@ -138,7 +138,7 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-jquery"></use>
                             </svg>
-                            <p>jQuery</p>
+                            <p>jQuery3</p>
                         </div>
                         <div class="item">
                             <div class="circlechart" data-percentage="75">
@@ -146,7 +146,7 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-jquery"></use>
                             </svg>
-                            <p>jQuery</p>
+                            <p>jQuery4</p>
                         </div>
                         <div class="item">
                             <div class="circlechart" data-percentage="75">
@@ -154,13 +154,33 @@
                             <svg class="icon" aria-hidden="true">
                                 <use xlink:href="#icon-jquery"></use>
                             </svg>
-                            <p>jQuery</p>
+                            <p>jQuery5</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="bt-project"></section>
+        <section class="bt-project">
+            <div class="content">
+                <div class="section-title">
+                    <h1>项目展示</h1>
+                </div>
+                <ul class="nav nav-tabs center-block" id="project-nav" role="tablist">
+                    <li class="nav-item active"><a href="#project1" class="nav-link" id="aproject1" data-toggle="tab">项目1</a></li>
+                    <li class="nav-item"><a href="#project2" class="nav-link" id="aproject2" data-toggle="tab">项目2</a></li>
+                    <li class="nav-item"><a href="#project3" class="nav-link" id="aproject3" data-toggle="tab">项目3</a></li>
+                    <li class="nav-item"><a href="#project4" class="nav-link" id="aproject4" data-toggle="tab">项目4</a></li>
+                    <li class="nav-item"><a href="#project5" class="nav-link" id="aproject5" data-toggle="tab">项目5</a></li>
+                </ul>
+                <div id="project-content" class="tab-content">
+                    <div class="tab-pane fade  in active" id="project1">1</div>
+                    <div class="tab-pane fade" id="project2">2</div>
+                    <div class="tab-pane fade" id="project3">3</div>
+                    <div class="tab-pane fade" id="project4">4</div>
+                    <div class="tab-pane fade" id="project5">5</div>
+                </div>
+            </div>
+        </section>
         <section class="bt-experience"></section>
         <section class="bt-contact"></section>
     </main>
