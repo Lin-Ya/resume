@@ -1,9 +1,16 @@
 // import 'reset-css'
 import '../css/normalize.css';
+
+//依赖jQuery插件
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '../lib/owl.carousel.min.js'
 import '../lib/owl.carousel.min.css'
+import '../lib/circle'
+import '../lib/circle.css'
+
+
+//本体样式
 import '../less/index.less'
 
 
@@ -17,11 +24,11 @@ $(function () {
         dots : false
     });
     $('#owl-skills').owlCarousel({
-        items: 2,
+        items: 1,
         autoplay: 3800,
         autoplaySpeed: 2000,
         loop: true,
-        animateOut: 'fadeOut',
         dots: false
     });
+    $('.circlechart').circlechart();
 });
