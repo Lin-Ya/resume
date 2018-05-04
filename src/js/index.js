@@ -46,7 +46,7 @@ $(function () {
             },
             1200: {
                 items: 4,
-                dotsEach: 4
+                dotsEach: 1
             }
         }
     });
