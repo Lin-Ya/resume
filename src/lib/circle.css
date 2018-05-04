@@ -18,8 +18,8 @@
 }
 
 .circle-chart__circle {
-    stroke: #00acc1;
-    stroke-width: 2;
+    stroke: hsl(187, 100%, 38%);
+    stroke-width: 1.5;
     stroke-linecap: square;
     fill: none;
     animation: circle-chart-fill 2s reverse;
@@ -46,12 +46,13 @@
 }
 
 .circle-chart__background {
-    stroke: #efefef;
+    stroke: transparent;
     stroke-width: 2;
     fill: none;
 }
 
 .circle-chart__info {
+    display: none;
     animation: circle-chart-appear 2s forwards;
     opacity: 0;
     transform: translateY(0.3em);
@@ -70,15 +71,15 @@
 }
 
 .success-stroke {
-    stroke: #00C851;
+    stroke: inherit;
 }
 
 .warning-stroke {
-    stroke: #ffbb33;
+    stroke: inherit;
 }
 
 .danger-stroke {
-    stroke: #ff4444;
+    stroke: inherit;
 }
 
 @keyframes circle-chart-fill {

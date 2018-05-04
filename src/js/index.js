@@ -21,14 +21,34 @@ $(function () {
         autoplaySpeed: 2000,
         loop: true,
         animateOut: 'fadeOut',
-        dots : false
+        dots: false
     });
     $('#owl-skills').owlCarousel({
-        items: 1,
         autoplay: 3800,
         autoplaySpeed: 2000,
         loop: true,
-        dots: false
+        dots: true,
+        margin: 10,
+        pagination: true,
+        info: true,
+        responsive: {
+            0: {
+                dotsEach: 1,
+                items: 1
+            },
+            480: {
+                items: 2,
+                dotsEach: 3                
+            },
+            768: {
+                items: 3,
+                dotsEach: 2
+            },
+            1200: {
+                items: 4,
+                dotsEach: 1
+            }
+        }
     });
     $('.circlechart').circlechart();
 });

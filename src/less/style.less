@@ -172,14 +172,45 @@ nav.bt-navbar {
         .item {
             text-align: center;
             position: relative;
+            .circlechart {
+                svg {
+                    width: 230px;
+                    height: 230px;
+                }
+                .success-stroke {
+                    stroke: #fff;
+                }
+            }
             .icon {
                 position: absolute;
-                width: 50px;
-                height: 50px;
-                top: 50%;
+                width: 90px;
+                height: 90px;
+                top: 45%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 background-color: @main-blue;
+                fill: #fff;
+            }
+            p {
+                margin-top: 30px;
+                font-size: 20px;
+            }
+        }
+        .owl-dots {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #aaaaaab6;
+                margin: 0 10px;
+                &.active {
+                    background-color: #fff;
+                }
             }
         }
     }
