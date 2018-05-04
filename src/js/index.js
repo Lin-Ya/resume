@@ -1,4 +1,4 @@
-import 'reset-css'
+// import 'reset-css'
 import '../css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'

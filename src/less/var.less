@@ -12,7 +12,9 @@
     margin: 20px;
     color: #fff;
     letter-spacing: 1px;
+    text-decoration: none;
     &:hover {
+        text-decoration: none;
         color: @main-blue;
         background-color: #fff;
     }
@@ -22,5 +24,22 @@
     &::selection {
         background: fadein(@main-blue, 40%);
         color: #fff;
+    }
+}
+
+section {
+    padding: 20px 0; // overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    &:nth-child(2n) {
+        background-color: @main-blue;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 200px;
+        border-bottom: 1px solid @main-blue;
+        top: 20px;
+        margin: 0 auto;
     }
 }
