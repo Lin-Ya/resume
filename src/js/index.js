@@ -16,4 +16,12 @@ $(function () {
         animateOut: 'fadeOut',
         dots : false
     });
+    $('#owl-skills').owlCarousel({
+        items: 2,
+        autoplay: 3800,
+        autoplaySpeed: 2000,
+        loop: true,
+        animateOut: 'fadeOut',
+        dots: false
+    });
 });
