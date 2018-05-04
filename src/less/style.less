@@ -109,9 +109,60 @@ nav.bt-navbar {
             margin-top: 30px;
         }
         h3 {
-            margin: 35px 0;
+            margin: 30px 0;
             font-size: 25px;
             text-align: center;
+        }
+    }
+}
+
+.bt-aboutme {
+    .aboutme-content {
+        font-size: 17px;
+        line-height: 25px;
+    }
+    .aboutme-service {
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .service {
+            cursor: pointer;
+            border-style: solid none solid solid;
+            border-color: #ddd;
+            border-width: 1px;
+            flex: 1;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:last-child {
+                border-right: 1px solid #ddd;
+            }
+            svg {
+                width: 60px;
+                height: 60px;
+                fill: @main-blue;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 20px;
+                letter-spacing: 4px;
+                color: black;
+            }
+            &:hover {
+                transition: all 1s;
+                background-color: @main-blue;
+                svg {
+                    fill: #fff;
+                }
+                p {
+                    color: #fff;
+                }
+            }
         }
     }
 }
