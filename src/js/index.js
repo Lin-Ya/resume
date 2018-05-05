@@ -15,6 +15,7 @@ import '../less/index.less'
 
 
 $(function () {
+    //轮播
     $('#owl-welcome').owlCarousel({
         items: 1,
         autoplay: 3800,
@@ -50,7 +51,18 @@ $(function () {
             }
         }
     });
+    $('#owl-message').owlCarousel({
+        items: 1,
+        autoplay: 3800,
+        autoplaySpeed: 2000,
+        loop: true,
+        animateOut: 'fadeOut',
+        dots: false
+    })
+
+    //圆形数据进度图
     $('.circlechart').circlechart();
+    //tab切换
     $('#project-nav a').click(function (e) {
         e.preventDefault()
         $(this).tab('show');
