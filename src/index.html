@@ -309,14 +309,17 @@
 				</div>
 				<div class="message-writingbox col-md-5">
 					<h2>我要留言</h2>
-					<form action="" class="messageform">
+					<form action="submit" class="messageform">
 						<div class="input-field">
 							<label for="name">名字</label>
 							<input type="text" name="name" id="userId" placeholder="Alice">
 						</div>
 						<div class="input-field">
 							<label for="message">留言</label>
-							<textarea name="message" id="messageId" cols="30" rows="5" placeholder="请写下你的留言吧"></textarea>
+							<textarea name="message" id="messageData" cols="30" rows="5" placeholder="请写下你的留言吧"></textarea>
+						</div>
+						<div class="input-button">
+								<input class="click-btn" type="submit" value="提交" id="submit-btn">
 						</div>
 					</form>
 				</div>

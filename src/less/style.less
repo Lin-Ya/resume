@@ -153,8 +153,9 @@ nav.bt-navbar {
                 color: black;
             }
             &:hover {
-                transition: all 1s;
+                transition: all .5s;
                 background-color: @main-blue;
+                margin-top: -1px;
                 svg {
                     fill: #fff;
                 }
@@ -278,8 +279,7 @@ nav.bt-navbar {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
-        border: 1px solid red;
+        align-items: flex-start;
         .message-content {
             display: flex;
             flex-direction: column;
@@ -291,6 +291,7 @@ nav.bt-navbar {
                 text-align: center;
             }
             ul {
+							margin-top: 30px;
                 li {
                     max-width: 400px;
                     padding: 20px;
@@ -359,14 +360,55 @@ nav.bt-navbar {
         }
         .message-writingbox {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             align-items: center;
             justify-content: flex-start;
+            max-width: 400px;
             h2 {
                 font-size: 25px;
                 font-weight: bold;
                 padding: 10px 0;
                 text-align: center;
+            }
+            .messageform {
+								padding: 10px 0;
+                .input-field {
+                    display: flex;
+                    flex-direction: row;
+                    color: #000;
+                    padding-bottom: 20px;
+                    font-size: 20px;
+                    label {
+                        padding: 10px 0;
+                        color: #fff;
+                        margin-right: 20px;
+                        width: 50px;
+                    }
+                    input {
+                        border: 1px solid @main-blue;
+                        padding: 10px 13px;
+                        width: 350px;
+                    }
+                    textarea {
+                        padding: 10px 13px;
+                        width: 350px;
+                        height: 100%;
+                    }
+                }
+                .input-button {
+									text-align: center;
+									padding-left: 70px;
+                    input {
+                        margin: 20px auto;
+                        background-color: @main-blue;
+                        width: 180px;
+                        &:hover {
+                            color: @main-blue;
+                            background-color: #fff;
+                        }
+                    }
+                }
             }
         }
     }
