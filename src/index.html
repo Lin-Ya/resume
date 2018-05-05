@@ -49,7 +49,7 @@
                     <a href="#">技术</a>
                 </li>
                 <li role="presentation">
-                        <a href="#">作品</a>
+                    <a href="#">作品</a>
                 </li>
                 <li role="presentation">
                     <a href="#">履历</a>
@@ -59,27 +59,27 @@
                 </li>
             </ul>
         </nav>
-        <section class="bt-hero">
-            <div class="content">
+        <section class="bt-hero container-fluid">
+            <div class="section-content">
                 <img src="./img/2.jpg">
                 <h1>冯晓泳</h1>
                 <h3>进入互联网，进入更加广阔的天地</h3>
                 <a href="#">下载简历</a>
             </div>
         </section>
-        <section class="bt-aboutme" id="aboutme">
-            <div class="content">
-                <div class="section-title row">
-                    <h1>关于我</h1>
-                    <p>立志成为一名优秀的全栈工程师</p>
-                </div>
+        <section class="bt-aboutme  container-fluid" id="aboutme">
+            <div class="section-title row">
+                <h1>关于我</h1>
+                <p>立志成为一名优秀的全栈工程师</p>
+            </div>
+            <div class="section-content">
                 <div class="aboutme-content row">
                     <ul class="col-md-10 col-md-offset-1">
                         <li>关注前端前沿技术，熟练应用常见前端框架，对代码有洁癖，追求高质量的代码，有组件化的思想，担当且创新</li>
                         <li>良好的团队沟通协作力和服务意识，较强的工作执 行力，和抗压能力，愿与公司同进退</li>
                         <li>较强的学习能力和 适应能力，良好的独立分析解决问题能力和逻辑分析思维</li>
                         <li>具有较强的审美能力</li>
-                    </ul>                 
+                    </ul>
                 </div>
                 <div class="aboutme-service">
                     <div class="service col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -108,12 +108,13 @@
                     </div>
                 </div>
             </div>
+
         </section>
-        <section class="bt-skills">
-            <div class="content">
-                <div class="section-title">
-                    <h1>技术</h1>
-                </div>
+        <section class="bt-skills  container-fluid">
+            <div class="section-title">
+                <h1>技术</h1>
+            </div>
+            <div class="section-content">
                 <div class="skills-content">
                     <div id="owl-skills" class="owl-carousel col-md-6">
                         <div class="item">
@@ -160,29 +161,125 @@
                 </div>
             </div>
         </section>
-        <section class="bt-project">
-            <div class="content">
-                <div class="section-title">
-                    <h1>项目展示</h1>
-                </div>
-                <ul class="nav nav-tabs center-block" id="project-nav" role="tablist">
-                    <li class="nav-item active"><a href="#project1" class="nav-link" id="aproject1" data-toggle="tab">项目1</a></li>
-                    <li class="nav-item"><a href="#project2" class="nav-link" id="aproject2" data-toggle="tab">项目2</a></li>
-                    <li class="nav-item"><a href="#project3" class="nav-link" id="aproject3" data-toggle="tab">项目3</a></li>
-                    <li class="nav-item"><a href="#project4" class="nav-link" id="aproject4" data-toggle="tab">项目4</a></li>
-                    <li class="nav-item"><a href="#project5" class="nav-link" id="aproject5" data-toggle="tab">项目5</a></li>
+        <section class="bt-project  container-fluid">
+            <div class="section-title">
+                <h1>项目展示</h1>
+            </div>
+            <div class="section-content">
+                <ul class="nav nav-tabs" id="project-nav" role="tablist">
+                    <li class="nav-item active">
+                        <a href="#project1" class="nav-link" id="aproject1" data-toggle="tab">项目1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project2" class="nav-link" id="aproject2" data-toggle="tab">项目2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project3" class="nav-link" id="aproject3" data-toggle="tab">项目3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project4" class="nav-link" id="aproject4" data-toggle="tab">项目4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project5" class="nav-link" id="aproject5" data-toggle="tab">项目5</a>
+                    </li>
                 </ul>
                 <div id="project-content" class="tab-content">
-                    <div class="tab-pane fade  in active" id="project1">1</div>
-                    <div class="tab-pane fade" id="project2">2</div>
-                    <div class="tab-pane fade" id="project3">3</div>
-                    <div class="tab-pane fade" id="project4">4</div>
-                    <div class="tab-pane fade" id="project5">5</div>
+                    <div class="tab-pane fade  in active" id="project1">
+                        <div class="project-item row">
+                            <div class="project-img col-md-4">
+                                <img src="./img/project-mock.png" alt="项目一">
+                            </div>
+                            <div class="project-content col-md-8">
+                                <h2 class="project-name">这是项目名称1</h2>
+                                <div class="project-info">
+                                    <h3>项目说明：</h3>
+                                    <p>使用vue.js（2.0）MVVM框架，vuex实现多组件之间的数据传递，vue-router实现多页面路由配配置，服务端通讯使用axios， jsonp， 移动端滚动库使用better-scroll，全面使用es6语法，使用webpack
+                                        2.0构建工具，Eslint检查代码质量。
+                                    </p>
+                                    <p>实现音乐播放器循环 || 随机播放功能 ，歌词滚动，播放器交互，歌手列表，榜单排行，搜索歌曲等20+组件</p>
+                                    <a href="#" class="project-link">预览地址:http://www.baidu.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="project2">
+                        <div class="project-item row">
+                            <div class="project-img col-md-4">
+                                <img src="./img/project-mock.png" alt="项目2">
+                            </div>
+                            <div class="project-content col-md-8">
+                                <h2 class="project-name">这是项目名称2</h2>
+                                <div class="project-info">
+                                    <h3>项目说明：</h3>
+                                    <p>使用vue.js（2.0）MVVM框架，vuex实现多组件之间的数据传递，vue-router实现多页面路由配配置，服务端通讯使用axios， jsonp， 移动端滚动库使用better-scroll，全面使用es6语法，使用webpack
+                                        2.0构建工具，Eslint检查代码质量。
+                                    </p>
+                                    <p>实现音乐播放器循环 || 随机播放功能 ，歌词滚动，播放器交互，歌手列表，榜单排行，搜索歌曲等20+组件</p>
+                                    <a href="#" class="project-link">预览地址:http://www.baidu.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="project3">
+                        <div class="project-item row">
+                            <div class="project-img col-md-4">
+                                <img src="./img/project-mock.png" alt="项目3">
+                            </div>
+                            <div class="project-content col-md-8">
+                                <h2 class="project-name">这是项目名称3</h2>
+                                <div class="project-info">
+                                    <h3>项目说明：</h3>
+                                    <p>使用vue.js（2.0）MVVM框架，vuex实现多组件之间的数据传递，vue-router实现多页面路由配配置，服务端通讯使用axios， jsonp， 移动端滚动库使用better-scroll，全面使用es6语法，使用webpack
+                                        2.0构建工具，Eslint检查代码质量。
+                                    </p>
+                                    <p>实现音乐播放器循环 || 随机播放功能 ，歌词滚动，播放器交互，歌手列表，榜单排行，搜索歌曲等20+组件</p>
+                                    <a href="#" class="project-link">预览地址:http://www.baidu.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="project4">
+                        <div class="project-item row">
+                            <div class="project-img col-md-4">
+                                <img src="./img/project-mock.png" alt="项目4">
+                            </div>
+                            <div class="project-content col-md-8">
+                                <h2 class="project-name">这是项目名称4</h2>
+                                <div class="project-info">
+                                    <h3>项目说明：</h3>
+                                    <p>使用vue.js（2.0）MVVM框架，vuex实现多组件之间的数据传递，vue-router实现多页面路由配配置，服务端通讯使用axios， jsonp， 移动端滚动库使用better-scroll，全面使用es6语法，使用webpack
+                                        2.0构建工具，Eslint检查代码质量。
+                                    </p>
+                                    <p>实现音乐播放器循环 || 随机播放功能 ，歌词滚动，播放器交互，歌手列表，榜单排行，搜索歌曲等20+组件</p>
+                                    <a href="#" class="project-link">预览地址:http://www.baidu.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="project5">
+                        <div class="project-item row">
+                            <div class="project-img col-md-4">
+                                <img src="./img/project-mock.png" alt="项目5">
+                            </div>
+                            <div class="project-content col-md-8">
+                                <h2 class="project-name">这是项目名称5</h2>
+                                <div class="project-info">
+                                    <h3>项目说明：</h3>
+                                    <p>使用vue.js（2.0）MVVM框架，vuex实现多组件之间的数据传递，vue-router实现多页面路由配配置，服务端通讯使用axios， jsonp， 移动端滚动库使用better-scroll，全面使用es6语法，使用webpack
+                                        2.0构建工具，Eslint检查代码质量。
+                                    </p>
+                                    <p>实现音乐播放器循环 || 随机播放功能 ，歌词滚动，播放器交互，歌手列表，榜单排行，搜索歌曲等20+组件</p>
+                                    <a href="#" class="project-link">预览地址:http://www.baidu.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            </div>
         </section>
-        <section class="bt-experience"></section>
-        <section class="bt-contact"></section>
+        <section class="bt-experience  container-fluid"></section>
+        <section class="bt-contact  container-fluid"></section>
     </main>
     <footer class="bt-footer"></footer>
 </body>

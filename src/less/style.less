@@ -87,7 +87,7 @@ nav.bt-navbar {
 }
 
 .bt-hero {
-    .content {
+    .section-content {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -223,7 +223,50 @@ nav.bt-navbar {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
         font-size: 20px;
+        margin: 0 auto;
+    }
+    #project-content {
+        .tab-pane:nth-child(2n){
+            .project-item {
+                flex-direction: row-reverse;
+            }
+        }
+        .project-item {
+            padding: 35px;
+            margin: 0 auto;
+            max-width: 1140px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .project-img {
+                display: flex;
+                justify-content: center;
+            }
+            .project-content {
+                padding-top: 10px;
+                .project-name {
+                    font-size: 35px;
+                    font-weight: bold;
+                    padding-bottom: 20px;
+                }
+                .project-info {
+                    h3 {
+                        color: #3d3d3d;
+                        padding: 20px 0;
+                        font-size: 17px;
+                    }
+                    p {
+                        text-align: justify;
+                        font-size: 17px;
+                        line-height: 25px;
+                        color: #000;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+        
     }
 }
