@@ -26,8 +26,11 @@ $(function () {
         e.preventDefault()
         $(this).tab('show');
     })
-    control.init($('#owl-message'),function ($target) {
-        $('#owl-message').trigger('add.owl.carousel',[$target])
-    });
+    let target = {}
+        target.$view = $('#owl-message'),
+        target.$name = $('#message-name'),
+target.$content = $('#message-data'),
+        target.$form = $('#message-form')
     
+    control.init(target);
 });

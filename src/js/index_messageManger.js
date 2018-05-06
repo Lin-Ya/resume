@@ -1,5 +1,4 @@
 import AV from 'leancloud-storage'
-const owl = require('./index_owl');
 
 // 设置你的app的id和key，在自己的leancloud控制台里面新建应用（免费），然后拷贝过来
 var APP_ID = 'n4Yf04qWyxzmjsbwDAVI2aum-gzGzoHsz';
@@ -21,8 +20,7 @@ const model = {
         message.save({
             name, content
         }).then((res) => {
-            console.log(res)
-            this.fetch()
+            control.loadMessage()
         }, (error) => {
             console.log('报错')
             console.log(error + '报错')
@@ -34,23 +32,21 @@ const model = {
     }
 }
 
-
 //control
 const control = {
     view: null,
     callback: null,
-    init: function ($view,callback) {
-        this.view = $view
-        this.callback = callback
+    init: function (targetConfig) {
+        Object.assign(this,targetConfig)
         model.init()
         this.loadMessage()
-        this.bindEvent($('#message-name'), $('#message-data'), $('#message-submit'))
+        this.bindEvent()
     },
-    bindEvent: function ($name, $content, $submit) {
-        $submit.on('click', (e) => {
+    bindEvent: function () {
+        this.$form.on('submit', (e) => {
             e.preventDefault();
-            let name = $name.val();
-            let content = $content.val();
+            let name = this.$name.val();
+            let content = this.$content.val();
             if (name === "" || content === "") {
                 alert("请填写完整在提交")
                 return;
@@ -59,6 +55,7 @@ const control = {
                 return;
             }
             model.save(name, content)
+            
         })
     },
     createNote: function (arr) {
@@ -85,7 +82,9 @@ const control = {
         })
     },
     render: function ($item) {
-        this.callback($item)
+        this.$view.trigger('add.owl.carousel', [$item]).trigger('update.owl.carousel')
+        this.$name.val()=''
+        this.$content.val()=''
     }
 }
 
