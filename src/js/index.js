@@ -15,7 +15,7 @@ import '../less/index.less'
 
 const AV = require('leancloud-storage')
 const owl = require('./index_owl');
-const model =require('./index_messageManger')
+const control =require('./index_messageManger')
 $(function () {
     owl.init();
 
@@ -26,5 +26,8 @@ $(function () {
         e.preventDefault()
         $(this).tab('show');
     })
-    model.init($('#message-name'),$('#message-data'),$('#message-submit'));
+    control.init($('#owl-message'),function ($target) {
+        $('#owl-message').trigger('add.owl.carousel',[$target])
+    });
+    
 });
