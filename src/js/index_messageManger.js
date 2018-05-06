@@ -55,7 +55,8 @@ const control = {
                 return;
             }
             model.save(name, content)
-            
+            this.$name.val('')
+            this.$content.val('')
         })
     },
     createNote: function (arr) {
@@ -84,9 +85,7 @@ const control = {
     render: function ($item) {
         //这里最坑，因为如果只是添加的话会导致每次都重复添加之前的数据
         //在最后要出发一次update事件。
-        this.$view.trigger('add.owl.carousel', [$item]).trigger('update.owl.carousel')
-        this.$name.val()=''
-        this.$content.val()=''
+        this.$view.trigger('add.owl.carousel', [$item]).trigger('update.owl.carousel');
     }
 }
 

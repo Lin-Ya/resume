@@ -51,6 +51,7 @@
         z-index: 2;
         letter-spacing: 1px;
         .heading {
+            margin-bottom: 20px;
             h1 {
                 font-size: 60px;
                 text-shadow: @gry 3px 3px 2px;
@@ -68,13 +69,21 @@
 }
 
 nav.bt-navbar {
+    border: none;
+    margin: 0;
     .nav {
+        font-size: 25px;
+        line-height: 30px;
         width: 100%;
         background-color: @main-blue;
         text-align: center;
         display: flex;
         justify-content: center;
-        padding: 0;
+        flex-wrap: wrap;
+        align-items: center;
+        border: none;
+        height: 105%;
+        padding-bottom: 1px;
         li {
             a {
                 color: #fff;
@@ -143,9 +152,10 @@ nav.bt-navbar {
 
 .bt-aboutme {
     text-align: center;
-    .aboutme-content {
-        font-size: 17px;
-        line-height: 25px;
+    .aboutme-content li{
+        padding: 2px 0;
+        font-size: 23px;
+        line-height: 30px;
         text-align: center;
     }
     .aboutme-service {
@@ -172,10 +182,10 @@ nav.bt-navbar {
                 fill: @main-blue;
             }
             p {
-                margin-top: 20px;
                 font-size: 20px;
                 letter-spacing: 4px;
                 color: black;
+                margin-top: 15px;
             }
             &:hover {
                 transition: all .5s;

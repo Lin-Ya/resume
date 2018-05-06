@@ -12,13 +12,14 @@ import '../lib/circle.css'
 
 //本体样式
 import '../less/index.less'
-
+//APP
 const AV = require('leancloud-storage')
 const owl = require('./index_owl');
-const control =require('./index_messageManger')
+const control = require('./index_messageManger')
+const slideUp = require('./index-slideUp')
 $(function () {
+    //轮播
     owl.init();
-
     //圆形数据进度图
     $('.circlechart').circlechart();
     //tab切换
@@ -26,11 +27,14 @@ $(function () {
         e.preventDefault()
         $(this).tab('show');
     })
-    let target = {}
-        target.$view = $('#owl-message'),
-        target.$name = $('#message-name'),
-target.$content = $('#message-data'),
-        target.$form = $('#message-form')
-    
-    control.init(target);
+    //留言板
+    let messageTarget = {}
+    messageTarget.$view = $('#owl-message'),
+    messageTarget.$name = $('#message-name'),
+    messageTarget.$content = $('#message-data'),
+    messageTarget.$form = $('#message-form')
+    control.init(messageTarget);
+
+    //slideUp
+    slideUp.init($('#message-data'))
 });
