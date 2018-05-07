@@ -16,6 +16,7 @@ import '../less/index.less'
 const AV = require('leancloud-storage')
 const owl = require('./index_owl');
 const control = require('./index_messageManger')
+const anchor = require('./index-anchor')
 $(function () {
     //轮播
     owl.init();
@@ -32,6 +33,8 @@ $(function () {
     messageTarget.$name = $('#message-name'),
     messageTarget.$content = $('#message-data'),
     messageTarget.$form = $('#message-form')
-    control.init(messageTarget);
+    // control.init(messageTarget);
 
+    //锚点跳转
+    anchor.bind($('.bt-navbar ul li a'))
 });

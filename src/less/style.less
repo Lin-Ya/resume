@@ -152,7 +152,7 @@ nav.bt-navbar {
 
 .bt-aboutme {
     text-align: center;
-    .aboutme-content li{
+    .aboutme-content li {
         padding: 2px 0;
         font-size: 23px;
         line-height: 30px;
@@ -466,16 +466,49 @@ nav.bt-navbar {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        position: relative;
         .contact-item {
             cursor: pointer;
             margin: 30px;
             padding: 10px;
             background-color: #444749;
             border-radius: 10%;
+            transition: all .3s;
             svg {
                 width: 40px;
                 height: 40px;
                 fill: #fff;
+            }
+            .contact-item-details {
+                width: 350px;
+                height: 350px;
+                position: absolute;
+                padding: 10px;
+                top: -300%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: #fff;
+                box-shadow: 0px 2px 2px 3px #363B3F;
+                display: none;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &#footer-email:hover {
+                background-color: @main-blue;
+            }
+            &#footer-phone:hover {
+                background-color: #d5750e;
+            }
+            &#footer-github:hover {
+                background-color: #000;
+            }
+            &#footer-weixin:hover {
+                background-color: #1aad19;
+                .contact-item-details {
+                    display: block;
+                }
             }
         }
     }

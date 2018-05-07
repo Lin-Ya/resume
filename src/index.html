@@ -46,16 +46,16 @@
 					<a href="#aboutme">关于我</a>
 				</li>
 				<li role="presentation">
-					<a href="#">技术</a>
+					<a href="#skills">技术</a>
 				</li>
 				<li role="presentation">
-					<a href="#">项目展示</a>
+					<a href="#project">项目展示</a>
 				</li>
 				<li role="presentation">
-					<a href="#">履历</a>
+					<a href="#message">留言</a>
 				</li>
 				<li role="presentation">
-					<a href="#">联系我</a>
+					<a href="#contactme">联系我</a>
 				</li>
 			</ul>
 		</nav>
@@ -124,7 +124,7 @@
 			</div>
 
 		</section>
-		<section class="bt-skills  container-fluid">
+		<section class="bt-skills  container-fluid" id="skills">
 			<div class="section-title">
 				<h1>技术</h1>
 			</div>
@@ -207,7 +207,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="bt-project  container-fluid">
+		<section class="bt-project  container-fluid" id="project">
 			<div class="section-title">
 				<h1>项目展示</h1>
 			</div>
@@ -324,7 +324,7 @@
 			</div>
 			</div>
 		</section>
-		<section class="bt-message  container-fluid">
+		<section class="bt-message  container-fluid" id="message">
 			<div class="section-title">
 				<h1>留言</h1>
 			</div>
@@ -372,27 +372,30 @@
 		</section>
 		<!-- <section class="bt-contact  container-fluid"></section> -->
 	</main>
-	<footer class="bt-footer bt-contact container-fluid">
+	<footer class="bt-footer bt-contact container-fluid" id="contactme">
 		<div class="row contact-list">
-			<a class="contact-item">
+			<a class="contact-item" id="footer-email">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-email">
 				</svg>
 			</a>
-			<a class="contact-item">
+			<a class="contact-item" id="footer-phone">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-phone">
 				</svg>
 			</a>
-			<a class="contact-item">
+			<a class="contact-item" id="footer-github" href="https://www.github.com/Lin-Ya">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-github">
 				</svg>
 			</a>
-			<a class="contact-item">
+			<a class="contact-item" id="footer-weixin">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-weixin">
 				</svg>
+				<div class="contact-item-details">
+					<img src="./img/01.jpg">
+				</div>
 			</a>
 		</div>
 		<p class="copyright">© Copyright 2018 All Rights Reserved.</p>
