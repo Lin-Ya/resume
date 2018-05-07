@@ -83,13 +83,21 @@ nav.bt-navbar {
         align-items: center;
         border: none;
         height: 105%;
-        padding-bottom: 1px;
+        padding: 10px 0;
         li {
+            margin: 0 10px;
             a {
                 color: #fff;
                 &:hover {
                     background-color: darken(@main-blue, 10%);
                 }
+                &:focus {
+                    background-color: inherit;
+                    color: #fff;
+                }
+            }
+            &.heightLight {
+                border-bottom: 2px solid #fff;
             }
         }
     }

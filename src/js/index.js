@@ -37,4 +37,26 @@ $(function () {
 
     //锚点跳转
     anchor.bind($('.bt-navbar ul li a'))
+    //动态固定顶部的状态栏
+    $(window).on('scroll', function () {
+        if($(window).scrollTop()>$(window).height()){
+            $('.bt-navbar').addClass('navbar-fixed-top')
+        }else {
+            $('.bt-navbar').removeClass('navbar-fixed-top')
+        }
+        watchingScroll()
+    })
+    function watchingScroll() {
+        let $mySections = $('[data-x]')
+        let length = $mySections.length
+        let minIndex = 0
+        for(let i=1; i<length; i++){
+            if (Math.abs($mySections[i].offsetTop - window.scrollY) <
+                Math.abs($mySections[minIndex].offsetTop - window.scrollY)
+            ) {
+                minIndex = i;
+            }
+        }
+        $('.bt-navbar ul li').eq(minIndex).addClass('heightLight').siblings().removeClass('heightLight')
+    }
 });
