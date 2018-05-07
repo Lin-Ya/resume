@@ -18,6 +18,7 @@ const owl = require('./index_owl');
 const control = require('./index_messageManger')
 const anchor = require('./index-anchor')
 $(function () {
+
     //轮播
     owl.init();
     //圆形数据进度图
@@ -33,10 +34,11 @@ $(function () {
     messageTarget.$name = $('#message-name'),
     messageTarget.$content = $('#message-data'),
     messageTarget.$form = $('#message-form')
-    // control.init(messageTarget);
+    control.init(messageTarget);
 
     //锚点跳转
-    anchor.bind($('.bt-navbar ul li a'))
+    anchor.bind($('.page-jump'))
+
     //动态固定顶部的状态栏
     $(window).on('scroll', function () {
         if($(window).scrollTop()>$(window).height()){

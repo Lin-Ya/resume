@@ -5,7 +5,7 @@ const anchor = {
             let $this = $(this)
             $this.on('click', function () {
                 var href = $this.attr("href");
-                var pos = $(href).offset().top;
+                var pos = $(href).offset().top - 60;
                 $("html,body").animate({ scrollTop: pos }, 1000);
                 return false;
             })

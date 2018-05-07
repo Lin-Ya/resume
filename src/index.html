@@ -36,42 +36,42 @@
 				<h1>HI,我是冯晓泳</h1>
 				<p>前端开发工程师</p>
 			</div>
-			<a href="#aboutme">关于我</a>
+			<a href="#aboutme" class="page-jump">关于我</a>
 		</div>
 	</header>
 	<main>
 		<nav class="bt-navbar navbar-flat navbar">
 			<ul class="nav navbar-collapse scrollmenu">
 				<li role="presentation" class="active">
-					<a href="#aboutme">主页</a>
+					<a href="#hero" class="page-jump">主页</a>
 				</li>
 				<li role="presentation">
-					<a href="#aboutme">关于我</a>
+					<a href="#aboutme" class="page-jump">关于我</a>
 				</li>
 				<li role="presentation">
-					<a href="#skills">技术</a>
+					<a href="#skills" class="page-jump">技术</a>
 				</li>
 				<li role="presentation">
-					<a href="#project">项目展示</a>
+					<a href="#project" class="page-jump">项目展示</a>
 				</li>
 				<li role="presentation">
-					<a href="#message">留言</a>
+					<a href="#message" class="page-jump">留言</a>
 				</li>
 			</ul>
 		</nav>
-		<section data-x class="bt-hero container-fluid">
+		<section data-x class="bt-hero container-fluid" id="hero">
 			<div class="section-content">
-				<img src="./img/2.jpg">
+				<img src="./img/hero.jpg">
 				<h1>冯晓泳</h1>
 				<h3>进入互联网，进入更加广阔的天地</h3>
 				<div class="hero-contact">
-					<a class="hero-email" href="mailto:fenghuiwing@outlook.com?subject=职位邀请。&body=你好，我看过了你的个人简历网站。">
+					<a id="emailAdress" class="hero-email" href="mailto:fenghuiwing@outlook.com?subject=职位邀请。&body=你好，我看过了你的个人简历网站。">
 						<svg class="icon" aria-hidden="true">
 							<use xlink:href="#icon-email"></use>
 						</svg>
 						<p>fenghuiwing@outlook.com</p>
 					</a>
-					<a class="hero-phone">
+					<a id="phoneNumber" class="hero-phone">
 						<svg class="icon" aria-hidden="true">
 							<use xlink:href="#icon-phone"></use>
 						</svg>
@@ -332,24 +332,6 @@
 				<div class="message-content col-lg-6 col-md-5 col-sm-7 col-xs-12">
 					<h2>他们的留言</h2>
 					<ul class="owl-carousel" id="owl-message">
-						<!-- <li class="item">
-							<h4 class="owner-name">用户2</h4>
-							<div class="owner-content">
-								<p class="owner-message">这是我的留言fdfds，fdsfddsfdsffdsfddsfdsffdsfddsfdsffdsfddsfdsffdsfddsfdsf我是用户一</p>
-							</div>
-						</li>
-						<li class="item">
-							<h4 class="owner-name">用户一</h4>
-							<div class="owner-content">
-								<p class="owner-message">这是我的留言fdfds，fdsfddsfdsffdsfddsfdsffdsfddsfdsffdsfddsfdsffdsfddsfdsf我是用户一</p>
-							</div>
-						</li>
-						<li class="item">
-							<h4 class="owner-name">用户3</h4>
-							<div class="owner-content">
-								<p class="owner-message">这是我的留言fdfds，fdsfddsfdsffdsfddsfdsffdsfddsfdsffdsfddsfdsffdsfddsfdsf我是用户一</p>
-							</div>
-						</li> -->
 					</ul>
 				</div>
 				<div class="message-writingbox col-lg-6 col-md-5 col-sm-7 col-xs-12">
@@ -374,12 +356,12 @@
 	</main>
 	<footer class="bt-footer bt-contact container-fluid" id="contactme">
 		<div class="row contact-list">
-			<a class="contact-item" id="footer-email">
+			<a href="#hero" class="contact-item page-jump" id="footer-email">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-email">
 				</svg>
 			</a>
-			<a class="contact-item" id="footer-phone">
+			<a href="#hero" class="contact-item page-jump" id="footer-phone">
 				<svg class="icon" aria-hidden="true">
 					<use xlink:href="#icon-phone">
 				</svg>
@@ -394,7 +376,7 @@
 					<use xlink:href="#icon-weixin">
 				</svg>
 				<div class="contact-item-details">
-					<img src="./img/01.jpg">
+					<img src="./img/Qcode.png">
 				</div>
 			</a>
 		</div>
