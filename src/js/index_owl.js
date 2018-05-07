@@ -30,8 +30,8 @@ owl.init = function () {
                 dotsEach: 3
             },
             1200: {
-                items: 4,
-                dotsEach: 1
+                items: 3,
+                dotsEach: 3
             }
         }
     });

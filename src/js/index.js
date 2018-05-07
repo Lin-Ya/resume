@@ -9,14 +9,13 @@ import '../lib/owl.carousel.min.css'
 import '../lib/circle'
 import '../lib/circle.css'
 
-
 //本体样式
 import '../less/index.less'
+
 //APP
 const AV = require('leancloud-storage')
 const owl = require('./index_owl');
 const control = require('./index_messageManger')
-const slideUp = require('./index-slideUp')
 $(function () {
     //轮播
     owl.init();
@@ -35,6 +34,4 @@ $(function () {
     messageTarget.$form = $('#message-form')
     control.init(messageTarget);
 
-    //slideUp
-    slideUp.init($('#message-data'))
 });
