@@ -116,6 +116,10 @@ nav.bt-navbar {
             border-radius: 50%;
             object-fit: cover;
             margin: 10px 0;
+            transition: all 1s;
+            &:hover {
+                transform: rotate(360deg);
+            }
         }
         .download {
             .click-btn;
@@ -436,11 +440,11 @@ nav.bt-navbar {
                     input {
                         border: 1px solid @main-blue;
                         padding: 10px 13px;
-                        width: 350px;
+                        max-width: 350px;
                     }
                     textarea {
                         padding: 10px 13px;
-                        width: 350px;
+                        max-width: 350px;
                         height: 100%;
                     }
                 }
@@ -492,7 +496,7 @@ nav.bt-navbar {
                 height: 350px;
                 position: absolute;
                 padding: 10px;
-                top: -300%;
+                top: -600%;
                 left: 50%;
                 transform: translateX(-50%);
                 background-color: #fff;
