@@ -8,6 +8,8 @@ import '../lib/owl.carousel.min.js'
 import '../lib/owl.carousel.min.css'
 import '../lib/circle'
 import '../lib/circle.css'
+import '../lib/fakeLoader.css'
+import '../lib/fakeLoader'
 
 //本体样式
 import '../less/index.less'
@@ -18,7 +20,13 @@ const owl = require('./index_owl');
 const control = require('./index_messageManger')
 const anchor = require('./index-anchor')
 $(function () {
-
+    //loader动画
+    $("#fakeLoaders").fakeLoader({
+        timeToHide: 2500, //设置loading动画显示的时间
+        zIndex: "999", //设置z-index层级
+        spinner: "spinner6", //这里有[spinner1,spinner2,...,spinner7]7种动画
+        bgColor: "#2a74e2", //设置背景颜色
+    });
     //轮播
     owl.init();
     //圆形数据进度图
@@ -31,9 +39,9 @@ $(function () {
     //留言板
     let messageTarget = {}
     messageTarget.$view = $('#owl-message'),
-    messageTarget.$name = $('#message-name'),
-    messageTarget.$content = $('#message-data'),
-    messageTarget.$form = $('#message-form')
+        messageTarget.$name = $('#message-name'),
+        messageTarget.$content = $('#message-data'),
+        messageTarget.$form = $('#message-form')
     control.init(messageTarget);
 
     //锚点跳转
@@ -41,18 +49,19 @@ $(function () {
 
     //动态固定顶部的状态栏
     $(window).on('scroll', function () {
-        if($(window).scrollTop()>$(window).height()){
+        if ($(window).scrollTop() > $(window).height()) {
             $('.bt-navbar').addClass('navbar-fixed-top')
-        }else {
+        } else {
             $('.bt-navbar').removeClass('navbar-fixed-top')
         }
         watchingScroll()
     })
+
     function watchingScroll() {
         let $mySections = $('[data-x]')
         let length = $mySections.length
         let minIndex = 0
-        for(let i=1; i<length; i++){
+        for (let i = 1; i < length; i++) {
             if (Math.abs($mySections[i].offsetTop - window.scrollY) <
                 Math.abs($mySections[minIndex].offsetTop - window.scrollY)
             ) {
