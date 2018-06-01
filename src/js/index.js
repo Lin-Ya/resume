@@ -1,3 +1,6 @@
+//本体样式
+import './iconfont.js'
+import '../less/index.less'
 // import 'reset-css'
 import '../css/normalize.css';
 
@@ -11,8 +14,7 @@ import '../lib/circle.css'
 import '../lib/fakeLoader.css'
 import '../lib/fakeLoader'
 
-//本体样式
-import '../less/index.less'
+
 
 //APP
 const AV = require('leancloud-storage')

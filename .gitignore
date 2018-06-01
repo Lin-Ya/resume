@@ -61,6 +61,3 @@ typings/
 *.git
 *.DS_Store
 *.gitignore
-
-#dist
-dist/

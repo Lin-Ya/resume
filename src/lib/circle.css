@@ -48,7 +48,7 @@
 .circle-chart__background {
     stroke: transparent;
     stroke-width: 2;
-    fill: none;
+    fill: rgba(72, 190, 245, 0.445);
 }
 
 .circle-chart__info {
