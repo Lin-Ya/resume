@@ -1,18 +1,18 @@
 //本体样式
 import './iconfont.js'
-import '../less/index.less'
-// import 'reset-css'
 import '../css/normalize.css';
+import '../less/index.less'
+
 
 //依赖jQuery插件
+import '../lib/fakeLoader.css'
+import '../lib/fakeLoader'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '../lib/owl.carousel.min.js'
 import '../lib/owl.carousel.min.css'
 import '../lib/circle'
 import '../lib/circle.css'
-import '../lib/fakeLoader.css'
-import '../lib/fakeLoader'
 
 
 
