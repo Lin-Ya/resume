@@ -10877,9 +10877,13 @@ module.exports = anchor;
 
 __webpack_require__(/*! ./iconfont.js */ "./src/js/iconfont.js");
 
+__webpack_require__(/*! ../css/normalize.css */ "./src/css/normalize.css");
+
 __webpack_require__(/*! ../less/index.less */ "./src/less/index.less");
 
-__webpack_require__(/*! ../css/normalize.css */ "./src/css/normalize.css");
+__webpack_require__(/*! ../lib/fakeLoader.css */ "./src/lib/fakeLoader.css");
+
+__webpack_require__(/*! ../lib/fakeLoader */ "./src/lib/fakeLoader.js");
 
 __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
@@ -10893,17 +10897,11 @@ __webpack_require__(/*! ../lib/circle */ "./src/lib/circle.js");
 
 __webpack_require__(/*! ../lib/circle.css */ "./src/lib/circle.css");
 
-__webpack_require__(/*! ../lib/fakeLoader.css */ "./src/lib/fakeLoader.css");
-
-__webpack_require__(/*! ../lib/fakeLoader */ "./src/lib/fakeLoader.js");
-
 //APP
 
 
 //依赖jQuery插件
-var AV = __webpack_require__(/*! leancloud-storage */ "./node_modules/leancloud-storage/dist/av-min.js");
-// import 'reset-css'
-//本体样式
+var AV = __webpack_require__(/*! leancloud-storage */ "./node_modules/leancloud-storage/dist/av-min.js"); //本体样式
 
 var owl = __webpack_require__(/*! ./index_owl */ "./src/js/index_owl.js");
 var control = __webpack_require__(/*! ./index_messageManger */ "./src/js/index_messageManger.js");
@@ -11994,4 +11992,4 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.5d94.js.map
+//# sourceMappingURL=bundle.e209.js.map
